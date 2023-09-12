@@ -367,10 +367,10 @@ public class World {
             }
             System.out.println(Messages.yourTurn);
             rest(1500);
-            enemy.drawPicture(Assets.greenTerminal);
+            System.out.println(Messages.sideString(enemy.stringPicture(Assets.redTerminal),Messages.stringMoveMenu(enemy),"",5,Assets.redTerminal,Assets.magentaTerminal,Assets.whiteTerminal));
             System.out.println(enemy.getName());
-            String enemyHealthBar =player.stringDrawHealth();
-            String enemyStaminaBar = player.stringDrawStamina();
+            String enemyHealthBar =enemy.stringDrawHealth();
+            String enemyStaminaBar = enemy.stringDrawStamina();
             Messages.sidePrint(enemyHealthBar,enemyStaminaBar,"",enemyHealthBar.split("\\r?\\n")[1].length()+10,Assets.brightRedTerminal,Assets.blueTerminal,Assets.whiteTerminal);
             //System.out.println(player.stringPicture(Assets.blueTerminal));
           System.out.println(Messages.sideString(player.stringPicture(Assets.blueTerminal),Messages.stringMoveMenu(player),"",5,Assets.blueTerminal,Assets.greenTerminal,Assets.whiteTerminal));
